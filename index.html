@@ -1,0 +1,23 @@
+<script src="jquery.js"></script>
+
+<button class="hello"></button>
+<div id='songs_list' ></div>
+<script>
+  var songs=['song1.mp3','song2.mp3'];
+  var currentSong=0;
+  var player=new Audio();
+  var i;
+  
+  function play_song(){
+    if(player=paused){
+      player.play();
+     }
+    else{
+      player.pause();
+     }
+   }
+  for(i=0;i<songs.length;i++){
+      document.getElementById("songs_list").innerHTML+="<div class='song_bar' onclick='player.src="+songs[i]+";play_song();'
+      "+songs[i]+"</div>";
+  }
+</script>
